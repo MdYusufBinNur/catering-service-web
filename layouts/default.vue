@@ -5,33 +5,41 @@
       app
       flat
     >
-      <v-row>
-        <v-col cols="12" md="4" sm="6" lg="4" >
-          <v-card-title v-show="bp.mdAndUp" class="pa-3">
-            <v-btn text class="text-capitalize"  :ripple="false" depressed>
+      <v-container>
+        <v-row>
+          <v-col cols="6" md="6" sm="3" lg="6" style="text-align: start; justify-content: center; align-self: center">
+            <v-btn text class="text-capitalize px-0" @click="$router.push('/')"  :ripple="false" depressed>
               The Great Spoon
             </v-btn>
-          </v-card-title>
-        </v-col>
-        <v-col cols="12" md="4" sm="6" lg="4" >
-          <v-img :src="logo" :class="bp.mdAndUp ? 'justify-center mb-4' : 'justify-center mb-3'" :aspect-ratio="bp.mdAndUp ? 7 : 3" contain position="relative"
-                 align="center"></v-img>
-        </v-col>
-        <v-col cols="12" md="4" sm="6" lg="4" >
-          <v-btn text v-show="bp.mdAndUp" :ripple="false" class="text-capitalize">
-            Menu
-          </v-btn>
-          <v-btn text v-show="bp.mdAndUp"  :ripple="false" class="text-capitalize">
-            Privacy Policy
-          </v-btn>
-          <v-btn text v-show="bp.mdAndUp"  :ripple="false" class="text-capitalize">
-            Terms & Conditions
-          </v-btn>
-          <v-spacer v-if="bp.mdAndUp"/>
-          <v-icon @click.stop="drawer = !drawer" v-if="bp.smAndDown">mdi-sort-variant</v-icon>
-        </v-col>
-      </v-row>
+          </v-col>
+          <!--        <v-col cols="12" v-if="bp.mdAndUp" md="2" sm="6" lg="2" class="" style="text-align: end; justify-content: center; align-self: center">-->
+          <!--         <v-card-actions class=" text-center" style="">-->
+          <!--              <v-img :src="logo" :class="bp.mdAndUp ? 'justify-center mb-4' : 'justify-center mb-3'" class="" :aspect-ratio="bp.mdAndUp ? 7 : 3" contain position="relative"-->
+          <!--                     align="center"></v-img>-->
+          <!--            </v-card-actions>-->
 
+          <!--        </v-col>-->
+          <v-col v-show="bp.mdAndUp" cols="12" md="6" sm="2" lg="6" style="text-align: end; justify-content: center; align-self: center">
+            <v-btn text  :ripple="false" class="text-capitalize" @click="$router.push('/')">
+              Menu
+            </v-btn>
+            <v-btn text  :ripple="false" class="text-capitalize" @click="$router.push('/about-us')">
+              About
+            </v-btn>
+            <v-btn text   :ripple="false" class="text-capitalize" @click="$router.push('/privacy-policy')">
+              Privacy Policy
+            </v-btn>
+            <v-btn text :ripple="false" class="text-capitalize" @click="$router.push('/terms-and-condition')">
+              Terms & Conditions
+            </v-btn>
+
+          </v-col>
+          <v-col cols="6" md="6" v-show="bp.smAndDown" sm="5" lg="6" style="text-align: right; justify-content: center; align-self: center">
+            <v-icon   @click.stop="drawer = !drawer" v-if="bp.smAndDown">mdi-sort-variant</v-icon>
+          </v-col>
+
+        </v-row>
+      </v-container>
     </v-app-bar>
     <v-navigation-drawer
       v-if="bp.smAndDown"
@@ -62,10 +70,11 @@
       </v-container>
     </v-main>
     <v-footer
-      :absolute="!fixed"
-      app
+
+      class="px-0 transparent"
+      style="padding: 0"
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <Footer />
     </v-footer>
   </v-app>
 </template>
@@ -102,3 +111,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.center-img{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #dbe4ed;
+}
+</style>

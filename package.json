@@ -2,11 +2,17 @@
   "name": "catering-service-web",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
+  "old_scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
+  },
+  "scripts": {
+    "dev": "node --openssl-legacy-provider ./node_modules/nuxt/bin/nuxt.js -H=0.0.0.0",
+    "build": "node --openssl-legacy-provider ./node_modules/nuxt/bin/nuxt.js build",
+    "start": "node --openssl-legacy-provider ./node_modules/nuxt/bin/nuxt.js start",
+    "generate": "node --openssl-legacy-provider ./node_modules/nuxt/bin/nuxt.js generate"
   },
   "dependencies": {
     "@babel/core": "^7.16.5",

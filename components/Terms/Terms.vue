@@ -22,7 +22,7 @@
     <p>We may update these terms and conditions from time to time. Any changes will be posted on our website, and you will be notified of any material changes by email.</p>
 
     <h3>Contact us</h3>
-    <p>If you have any questions about our terms and conditions or how to use our website or app, please contact us at support@thegreatspoon.com.</p>
+    <p>If you have any questions about our terms and conditions or how to use our website or app, please contact us at support@thegreatspoon.xyz.</p>
   </v-container>
 </template>
 

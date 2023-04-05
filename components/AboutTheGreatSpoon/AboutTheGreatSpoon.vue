@@ -20,7 +20,7 @@
     </ul>
 
     <h3>Contact us</h3>
-    <p>If you have any questions about our catering services or would like to schedule a consultation, please contact us at info@thegreatspoon.com.</p>
+    <p>If you have any questions about our catering services or would like to schedule a consultation, please contact us at info@thegreatspoon.xyz.</p>
   </v-container>
 </template>
 

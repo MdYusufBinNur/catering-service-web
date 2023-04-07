@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - catering-service-web',
-    title: 'catering-service-web',
+    titleTemplate: '%s',
+    title: 'The Great Spoon | Fast Delivery & Fresh Food',
     htmlAttrs: {
       lang: 'en'
     },
@@ -15,7 +15,9 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'description', content: 'Get delicious food delivered right to your doorstep in no time with The Great Spoon. Enjoy fast and fresh food options that satisfy your cravings. Order now and experience the best food delivery service in town.' }
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
